@@ -5,6 +5,6 @@ if n>1:
             print("not a prime")
             break
     else:
-         print("prime")
+        print("prime")
 else:
-    print("not a prime")
+    print("prime")
