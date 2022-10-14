@@ -1,34 +1,29 @@
-def prime(a):
-    b=0
-    for i in range(1,a):
-        if a%i==0:
-            b+=1
-    if b==1:
-        return True
-    return False
-def np(a):
-    b,c,d=a,0,0
-    while b>c:
-        b+=1
-        if prime(b):
-            c=b
-    b=a
-    while d<b:
-        b-=1
-        if prime(b):
-            d=b
+t=int(input())
+for i in range(t):
+    n=int(input())
+    a=n
+    while 1:
+        prime=True
+        for i in range(2,int(a**0.5)+1):
+            if a%i==0:
+                prime=False
+                break
+        if prime==True:
             break
-    if c-a<a-d:
-        return c
+        else:
+            a+=1
+    b=n
+    while 1:
+        prime=True
+        for i in range(2,int(a**0.5)+1):
+            if b%i==0:
+                prime=False
+                break
+        if prime==True:
+            break
+        else:
+            b-=1
+    if n-b<=a-n:
+         print(b)
     else:
-        return d
-a=int(input())
-b=[]
-for i in range(a):
-    c=int(input())
-    if prime(c):
-        b.append(c)
-    else:
-        b.append(np(c))
-for j in b:
-    print(j)
+        print(a)
