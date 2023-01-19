@@ -1,4 +1,4 @@
-X,Y,M=map(int,input().split())
-a=X**Y
-b=a%M
+x,y,m=map(int,input().split())
+a=x**y
+b=a%m
 print(b)
